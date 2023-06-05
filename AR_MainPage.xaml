@@ -5,15 +5,23 @@
              Title="AR_RecargaTelefónica">
 
     <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-            <Label Text="Ingrese su número de teléfono" FontSize="20" HorizontalOptions="Center" Margin="0,20" />
+        <Label Text="Ingrese su número de teléfono" FontSize="20" HorizontalOptions="Center" Margin="0,20" />
+    <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
             <Entry Placeholder="Ingrese un número" Keyboard="Numeric" HorizontalOptions="FillAndExpand" Margin="20" />
+    </Grid>
+        
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
