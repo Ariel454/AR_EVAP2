@@ -8,30 +8,34 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Label Text="Ingrese su número de teléfono" FontSize="20" HorizontalOptions="Center" Margin="0,20" />
-    <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
+        <Label Text="Ingrese su número" HorizontalOptions="Center" Grid.Row="0" />
 
-            <Entry Placeholder="Ingrese un número" Keyboard="Numeric" HorizontalOptions="FillAndExpand" Margin="20" />
-    </Grid>
-        
+        <Entry Placeholder="Ingrese un número" Keyboard="Numeric" HorizontalOptions="FillAndExpand" Margin="20" />
 
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+        <StackLayout Orientation="Vertical" Grid.Row="2">
+            <Entry Placeholder="Campo izquierdo" HorizontalOptions="StartAndExpand" />
 
-                <Entry x:Name="ElementEntry" Placeholder="Seleccione un elemento" IsReadOnly="True" Grid.Column="0" HorizontalOptions="End" />
-                <Button Text="▼" Clicked="OnButtonClicked" Grid.Column="1" />
-            </Grid>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="RadioButton1" GroupName="Puntos" />
+                <Label Text="Punto 1" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="RadioButton2" GroupName="Puntos" />
+                <Label Text="Punto 2" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton x:Name="RadioButton3" GroupName="Puntos" />
+                <Label Text="Punto 3" />
+            </StackLayout>
+        </StackLayout>
 
-            <Picker x:Name="ElementPicker" Title="Seleccione un elemento" SelectedIndexChanged="OnPickerSelectionChanged" Grid.Row="1" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal" Grid.Row="3">
+
+            <Picker x:Name="ElementPicker" Title="Seleccione el operador" SelectedIndexChanged="OnPickerSelectionChanged" Grid.Row="4" HorizontalOptions="Center">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>Elemento 1</x:String>
@@ -40,7 +44,14 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-        </Grid>
+        </StackLayout>
+
+        <Label x:Name="TextoMostrarLabel" HorizontalOptions="Center" Grid.Row="5" />
+    </Grid>
+    
+    
+
+
 
 
     </ContentPage>
