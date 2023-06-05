@@ -43,5 +43,10 @@ public partial class AR_MainPage : ContentPage
         ElementPicker.Focus();
     }
 
+    private void OnPickerSelectionChanged(object sender, EventArgs e)
+    {
+        var selectedElement = ElementPicker.SelectedItem as string;
+    }
+
 
 }
